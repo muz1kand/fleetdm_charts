@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  labels:
+    app: fleet
+    chart: fleet
+    heritage: {{ .Release.Service }}
+    release: {{ .Release.Name }}
+  name: fleet
+  namespace: {{ .Release.Namespace }}
